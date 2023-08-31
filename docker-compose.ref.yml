@@ -1,0 +1,11 @@
+version: "3"
+services:
+  node-app:
+    container_name: simple-node-app
+    build: .
+    volumes:
+      - ./scr:/app/scr:ro
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./.env
